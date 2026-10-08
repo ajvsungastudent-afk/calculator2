@@ -19,7 +19,6 @@ function App() {
   const [operation, setOperation] = useState(null);
   const [waitingForNext, setWaitingForNext] = useState(false);
 
-  // Number Button Handler
   const numButtonClickHandler = (value) => {
     if (waitingForNext || disp === '0' || disp === 'Alvin Jan Sunga' || disp === 'Error') {
       setDisp(value);
@@ -29,15 +28,13 @@ function App() {
     }
   };
 
-  // Operation Button Handler (+, -, *, /)
   const operationClickHandler = (op) => {
     setOperand1(parseFloat(disp));
     setOperation(op);
-    setDisp(op); // Shows ONLY the operator symbol (+, -, *, /)
-    setWaitingForNext(true); // Prepares display to clear when typing next number
+    setDisp(op); )
+    setWaitingForNext(true); 
   };
 
-  // Clear Button Handler
   const clearButtonClickHandler = () => {
     setDisp('0');
     setOperand1(null);
@@ -45,7 +42,6 @@ function App() {
     setWaitingForNext(false);
   };
 
-  // Equal Button Handler
   const equalButtonClickHandler = () => {
     if (operand1 !== null && operation !== null) {
       const operand2 = parseFloat(disp);
@@ -78,7 +74,6 @@ function App() {
     }
   };
 
-  // Surname Button Handler
   const nameButtonClickHandler = () => {
     setDisp('Alvin Jan Sunga');
     setOperand1(null);
